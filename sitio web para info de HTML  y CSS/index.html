@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+		<title>Lenguaje de marcado HTML</title>
+		<meta name="descripcion" content="Esto es mi libro de HTML" />
+		<meta name="author" content="Henry" />
+		<meta name="keyword" content="Mi primer titulo, mi primer pagina, Pagina Web" />
+        <link rel="stylesheet" href="estilos.css">
+        <div class="agrupar">
+      	<header class="cabecera">
+		<h1>Lenguajes</h1>
+	  </header>
+
+	  <nav class="menu">
+        <ul>
+     	  <li>Principal</li>
+          <li>Ayuda</li>
+     	  <li>Contacto</li>
+        </ul>
+	  </nav>
+
+	  <section class="seccion">
+	  	<article>
+	  	  <hgroup>
+	  		<h1>Introducción a HTML</h1>
+	  		
+	  	  </hgroup>
+	  		
+	  		<time datetime="12-10-2018"> Publicado 12-10-2018</time>
+	  		
+	  		<p>En su corazón, <strong>HTML</strong> es un lenguaje muy sencillo compuesto de elementos, que pueden ser aplicados a piezas de texto para darles un significado diferente en un documento <small> (¿Esto es un párrafo? ¿Esto es una lista con viñetas?</small> ¿Esto es parte de una tabla?), estructura un documento en secciones lógicas <span>(¿Tiene una cabecera? ¿Tres columnas de contenido? ¿Un menú de navegación?)</span> e incrusta contenido como imágenes y vídeos en una página. Este módulo introducirá los dos primeros de estos, e introduce conceptos fundamentales y la sintaxis que necesitas para entender HTML.</p>
+
+	  		<h2>¿Qué es el HTML?</h2>
+	  		<p><strong>El HTML (HyperText Markup Language o lenguaje de marcas de hipertexto)</strong> no es un lenguaje de programación, es un lenguaje de marcado, usado para decirle a tu navegador cómo estructurar la páginas que visitas. Puede ser tan complejo o tan simple como desee el desarrollador web. El HTML consiste en una serie de  elementos, que puedes utilizar para encerrar, delimitar o marcar partes diferentes del contenido para hacer que aparezcan de una cierta manera, o actúen de forma determinada. Las etiquetas que delimitan un fragmento de contenido pueden hacer que dicho contenido enlace con otra página, ponga una palabra en cursiva, etcétera. Por ejemplo, dada la siguiente línea de contenido:</p>
+
+	  		<img src="imagenes/anatomia.png"/>
+
+	  		<p>Las partes principales de nuestro elemento son:</p>
+
+            <li><strong>La etiqueta de apertura:</strong> consiste en el nombre del elemento (en este caso, p), encerrada entre paréntesis angulares de apertura y cierre. Esto indica dónde el elemento comienza o empieza a tener efecto; en este caso, donde comienza el párrafo.</li>
+            <li><strong>El contenido:</strong> es el contenido del elemento, que en este caso es solo texto.</li>
+            <li><strong>La etiqueta de cierre:</strong> es lo mismo que la etiqueta de apertura, excepto que incluye una barra diagonal antes del nombre del elemento. Esto indica dónde termina el elemento; en este caso, dónde finaliza el párrafo. No incluir una etiqueta de cierre es un error común de principiante, y puede conducir a resultados extraños.</li>
+
+            <p><strong>El elemento:</strong> lo conforman la suma de la etiqueta de apertura, la etiqueta de cierre y  el contenido.</p>
+            
+            <h3>Atributos</h3>
+             <p>Los elementos pueden también tener atributos, que se ven así:</p>
+             <img src="imagenes/htmlatributos.png"/>
+             <p>Los atributos contienen información adicional acerca del elemento, la cual no quieres que aparezca en el contenido real del elemento. Aquí class es el nombre del atributo y editor-note el valor del atributo. En este caso, el atributo class permite darle al elemento un nombre identificativo, que se puede utilizar luego para apuntarle al elemento información de estilo y demás cosas.</p>
+
+             <p>Un atributo debe tener siempre:</p>
+             <li>Un espacio entre este y el nombre del elemento (o del atributo previo, si el elemento ya posee uno o más atributos).</li>
+             <li>El nombre del atributo, seguido por un signo de igual (=).</li>
+             <li>Comillas de apertura y de cierre, encerrando el valor del atributo.</li>
+
+             <p>Los atributos siempre se incluyen en la etiqueta de apertura de un elemento, nunca en la de cierre.</p>
+             <p><strong>Nota:</strong> el atributo con valores simples que no contengan espacios en blanco ASCII (o cualesquiera de los caracteres " ' ` = < >) pueden permanecer sin entrecomillar, pero se recomienda entrecomillar todos los valores de atributo, ya que esto hace que el código sea más consistente y comprensible.</p>
+
+            <h4>Añadir atributos a un elemento</h4>
+              <p>Otro ejemplo de un elemento es <Strong>&lt;a&gt;</Strong>, que significa ancla, y creará un hipervínculo en la parte del texto que quede encerrado entre las etiquetas.  Puede tener una serie de atributos entre los que se encuentran los siguientes:</p>
+                <Li><strong>href:</strong> El valor de este atributo indica la dirección web a la que se quiere que apunte el enlace, que será hacia donde nos lleve el navegador cuando se hace clic sobre el elemento. Por ejemplo, <strong>href="https://www.mozilla.org/"</strong>.</Li>
+                <Li><strong>title:</strong> El atributo title añade información adicional sobre el enlace, como puede ser el título de la página que vinculas. Por ejemplo, title="La página de inicio de Mozilla". Esta información aparecerá cuando se le pase el ratón por encima.</Li>
+                <li><strong>target:</strong> El atributo target especifica el contexto de navegación que va a usar para mostrar el enlace. Por ejemplo, target="_blank" mostrará el enlace en una pestaña nueva. Si quieres mostrar el enlace en la pestaña activa, simplemente omite este atributo.</li>
+
+            <h5>Atributos booleanos</h5>
+              <p>En ocasiones puedes ver atributos escritos sin valores. Esto está permitido. Se denominan atributos booleanos y pueden tener únicamente un valor, que como norma general es el mismo que el nombre del atributo. Por ejemplo, el atributo <em>disabled</em> que se puede asignar a elementos de entrada de formularios si se desea desactivarlos para que el usuario no pueda introducir datos en estos.</p>
+              <img src="imagenes/disabled.png"/>
+              <p>De manera abreviada, también es posible escribirlo como se describe a continuación (además, se ha incluido un elemento de entrada de formulario no desactivado como referencia, para dar una idea más precisa de lo que sucede):</p>
+              <img src="imagenes/disabled 1.png"/>
+
+            <h5>Omitir comillas en valores de atributos</h5>
+              <p>Cuando observas diferentes páginas web, puedes encontrarte con todo tipo de estilos de etiquetado extraños, que incluyen valores de atributos sin comillas. Esto se permite en ciertas circunstancias, pero interrumpirá la edición en otras. Por ejemplo, si volvemos a revisar el ejemplo de enlace, sería posible escribir una versión básica con solo el atributo href, como este:</p>
+              <img src="imagenes/atributo href.png"/>
+              <p>Sin embargo, las cosas no funcionarán cuando a este estilo se añada el atributo title:</p>
+              <img src="imagenes/atributo title.png"/>
+              <p>En este punto el navegador interpretará mal el cambio y pensará que el atributo title corresponde a tres atributos: un atributo title con el valor La y dos atributos booleanos: página web de y Mozilla. Obviamente, esto no es lo que se desea, porque causa errores o un comportamiento inesperado en el código, como se observa en el ejemplo siguiente. Mantén el cursor sobre el enlace para ver qué muestra el texto del título.</p>
+              <p>Se aconseja incluir siempre las comillas de los atributos para evitar este tipo de problemas y producir un código más legible.</p>
+
+            <h5>¿Comillas simples o dobles?</h5>
+              <p>En este artículo todos los atributos se han incluido en comillas dobles. Sin embargo, se puede ver comillas simples en algunos HTML. Esto es un simple tema de estilo, y puedes elegir usar el tipo que prefieras. Ambas líneas de código son equivalentes.</p>
+              <img src="imagenes/Errores con Comillas.png"/>
+
+            <h3>¿Qué hay en la cabecera? Metadatos en HTML</h3>
+	  		  <p>La cabecera de un documento HTML es la parte que no se muestra en el navegador cuando se carga la página. Contiene información como el título (&lt;title&gt;) de la página, enlaces al CSS (si quieres aplicar estilo a tu contenido HTML con CSS), enlaces para personalizar faviconos, y otros metadatos (datos sobre el HTML, como quién lo escribió y palabras claves importantes que describen el documento). En este artículo abarcaremos todo esto y más, para darte bases sólidas en el manejo del marcado y otros códigos que deberían estar presentes en tu cabecera.</p>
+
+              <p><strong>Estructura de un documento HTML</strong></p>
+              <img src="imagenes/!DOCTYPE html.png"/>
+
+               <p><strong>&lt;!DOCTYPE html&gt;</strong>: El elemento doctype. En sus inicios, cuando el HTML llevaba poco tiempo (alrededor de 1991-1992), los doctypes servían como enlaces al conjunto de reglas que la página HTML debía seguir para que fuera considerado buen HTML, lo que podía significar poder efectuar una comprobación automática de errores y otras funcionalidades útiles. Un elemento doctype de aquella época podía parecerse a esto: </p>
+               <img src="imagenes/doctype public.png"/>
+               <p>En la actualidad se ignora y se considera un legado histórico que hay que incluir para que todo funcione correctamente. &lt;!DOCTYPE html&gt; es la secuencia de caracteres más corta que se acepta como elemento doctype válido, y esto es lo único que realmente necesitas saber.</p>
+               <p><strong>&lt;html&gt;&lt;/html&gt;:</strong>: Este elemento engloba todo el contenido de la página y es conocido en ocasiones como el elemento raíz.</p>
+               <p><strong>&lt;head&gt;&lt;/head&gt;:</strong>: El elemento <head> (cabecera). Este elemento actúa como contenedor para todos los parámetros que quieras incluir en el documento HTML que no será visible a los visitantes de la página. Incluye cosas como palabras clave y la descripción de la página que quieras mostrar en los resultados de búsqueda, así como la hoja de estilo para formatear nuestro contenido, declaraciones de codificación de caracteres y más. Aprenderás más acerca de esto en el siguiente artículo de la serie.</p>
+               <p><strong>&lt;meta charset="utf-8"&gt;—&lt;meta;&gt;:</strong>. Este elemento establece el juego de caracteres que tu documento usará en utf-8, que incluye casi todos los caracteres de todos los idiomas humanos. Básicamente, puede manejar cualquier contenido de texto que puedas incluir. No hay razón para no establecerlo, y puede evitar problemas en el futuro.</p>
+               <p><strong>&lt;title&gt;&lt;/title&gt;:</strong> — el elemento &lt;title&gt; establece el título de tu página, que es el título que aparece en la pestaña o en la barra de título del navegador cuando la página es cargada, y se usa para describir la página cuando es añadida a los marcadores o como favorita.</p>
+              <p><strong>&lt;body&gt;&lt;/body&gt;:</strong> — el elemento &lt;body&gt;. Encierra todo el contenido que deseas mostrar a los usuarios web que visiten tu página, ya sea texto, imágenes, videos, juegos, pistas de audio reproducibles, y demás.</p>
+
+            <h3>Añadir un título</h3>  	
+             Ya hemos visto el elemento &lt;title&gt; en acción: se puede usar para poner un título al documento. Sin embargo, esto puede confundirse con el elemento &lt;h1>&gt;, que se utiliza para poner un encabezado de nivel superior al cuerpo de tu contenido. Esto también se conoce como el título de la página. ¡Pero son cosas diferentes!
+             <p><li>El elemento <strong>&lt;h1&gt;</strong> aparece en la página cuando se carga en el navegador. En general debería haber uno solo por página, para especificar el título del contenido de tu página (el título de tu historia, el título de la noticia, o de lo que sea apropiado según el uso que le des).</li></p>
+             <p><li>El elemento <strong>&lt;title&gt;</strong> es un metadato que representa el título de todo el documento HTML (no del contenido del documento).</li></p>
+
+            <h3>Imágenes</h3>
+               <p>Presta atención nuevamente al elemento imagen &lt;img&gt;:</p>
+               <img src="imagenes/img src 1.png"/>
+
+            <p>Como ya se dijo antes, incrusta una imagen en la página, en la posición en que aparece. Lo logra a través del atributo src (source), el cual contiene el path (ruta o ubicación) de tu archivo de imagen.</p>
+            <p>También se incluye un atributo alt (alternative) el cual contiene un texto que debería describir la imagen, y que podría ser accedido por usuarios que no pueden ver la imagen, quizás porque:</p>
+              <p>Son ciegos o tienen deficiencias visuales. Los usuarios con impedimentos visuales usualmente utilizan herramientas llamadas Lectores de pantalla (Screen Readers), los cuales les leen el texto contenido en el atributo alt.</p>
+              <p>Se produjo algún error en el código que impide que la imagen sea cargada. Como ejemplo, modifica deliberadamente la ubicación dentro del atributo src para que este sea incorrecto. Si guardas y recargas la página, deberías ver algo así en lugar de la imagen:</p>
+              <img src="imagenes/mi pagina de prueba.png"/>
+
+
+            <h3>Metadatos: el elemento &lt;meta&gt;</h3>
+             <p>Los metadatos son datos que describen datos, y HTML tiene una forma «oficial» de introducir metadatos en un documento: el elemento &lt;meta&gt;. Por supuesto, el resto de elementos de los que hablamos en este artículo también podrían considerarse metadatos. Hay muchos tipos diferentes de elementos &lt;meta&gt; que se pueden incluir en el &lt;head&gt; de tu página, pero no vamos a intentar explicarlos todos en esta etapa porque resultaría demasiado confuso. En lugar de ello vamos a explicar algunas cuestiones con las que seguramente te vas a encontrar, solo para que te hagas una idea.<p>
+
+             <h4>La codificación de caracteres de tu documento</h4>
+              <p>En el ejemplo que hemos visto arriba había incluida esta línea:</p>
+               <img src="imagenes/meta 1.png"/>
+              <p>Este elemento simplemente especifica la codificación de caracteres del documento: el conjunto de caracteres que el documento puede usar. <strong>utf-8</strong> es un conjunto universal de caracteres que incluye casi todos los caracteres de casi cualquier idioma humano. Esto significa que tu página web podrá gestionar la visualización de cualquier idioma; por lo tanto, resulta una buena idea configurar esto en cada página web que crees. Por ejemplo, tu página podría gestionar el inglés y el japonés igual de bien:</p>
+               <div><img src="imagenes/meta examples.png"/></div>
+              <p>Si en cambio estableces, por ejemplo, la configuración de caracteres ISO-8859-1 (el juego de caracteres para el alfabeto latino), la representación de tu página se arruina por completo:</p>
+               <img src="imagenes/meta examples 1.png"/>
+              <p><strong>Nota:</strong> Algunos navegadores (Chrome, por ejemplo) arreglan automáticamente las codificaciones de caracteres incorrectas, de modo que según el navegador que uses, puede que no te topes con este problema. Aun así, deberías incluir una codificación de caracteres utf-8 en tu página web para evitar que se presenten problemas potenciales con otros navegadores.</p>
+             
+             <h4>Aprendizaje activo: Experimenta con la codificación de caracteres</h4>
+              <p>Para probar esto, vuelve a visitar la plantilla HTML simple que obtuviste en la sección anterior sobre &lt;title&gt; (la página title-example.html) e intenta cambiar el valor de la propiedad meta charset por ISO-8859-1 y añade el japonés a tu página. Este es el código que usamos:</p>
+              <img src="imagenes/japanese example.png"/>	
+
+             <h4>Añadir un autor y una descripción</h4>
+              <p>Muchos elementos &lt;meta&gt; incluyen atributos name y content:</p>
+                <Li><code>name</code> especifica el tipo de metadato del que se trata; es decir, qué tipo de información contiene.</Li>
+                <Li><code>content</code> especifica el contenido del metadato en sí.</Li>
+              <p>Dos de esos metadatos que resultan útiles de incluir en tu página definen al autor de la página  y proporcionan una descripción concisa de la página. Veamos un ejemplo:</p>
+              <img src="imagenes/meta y content.png"/>
+              <p>Especificar un autor resulta ventajoso por diversos motivos: es útil saber quién escribió la página y para poder ponerte en contacto con el autor si tienes preguntas sobre el contenido. Algunos sistemas de gestión de contenido tienen herramientas para extraer automáticamente la información del autor de la página y ponerla a disposición para tales fines.</p>
+              <p>Especificar una descripción que incluya palabras clave relacionadas con el contenido de tu página resulta útil porque tiene el potencial de hacer que la página aparezca más arriba en las búsquedas relevantes que efectúan los motores de búsqueda (tales actividades se denominan optimizaciones del motor de búsqueda (Search Engine Optimization) o SEO.)</p>
+
+              <img src="imagenes/motores de busqueda.png"/>
+              <img src="imagenes/Mozilla Developer.png"/>
+              <img src="imagenes/Notas de meta.png"/>
+
+             <h4>Otros tipos de metadatos</h4>
+             <p>Al navegar por la web también puedes encontrar otros tipos de metadatos. Muchas de las funciones que verás en los sitios web son creaciones propietarias diseñadas para proporcionar a ciertos sitios (como los sitios de redes sociales) información específica que puedan usar.</p>
+             <p>Por ejemplo, Open Graph Data es un protocolo de metadatos que Facebook inventó para proveer metadatos más ricos para los sitios web. En las fuentes de código de MDN, encontrarás esto:</p>
+             <img src="imagenes/meta property.png"/>
+
+             <!-- <meta property="og:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
+             <meta property="og:description" content="El Mozilla Developer Network (MDN) proporciona información 
+                  acerca de tecnologías de código web abierto, incluidos HTML, CSS, y APIs 
+                   tanto para HTML5 como para aplicaciones web. También documenta productos Mozilla, como el sistema operativo Firefox OS.">
+             <meta property="og:title" content="Mozilla Developer Network">-->
+
+             <p>Un efecto de esto es que cuando desde Facebook enlazas a un MDN, el enlace aparece con una imagen y una descripción, lo que resulta una experiencia más enriquecedora para los usuarios.</p>
+              <img src="imagenes/facebook-output.png"/>
+
+             <p>Twitter también tiene sus metadatos propios, que tienen un efecto similar cuando la URL del sitio se muestra en twitter.com. Por ejemplo:</p>
+              <img src="imagenes/metadatos de twiter.png"/>
+
+
+            <h2>Agregar iconos personalizados a tu sitio</h2>
+              <p>Para enriquecer un poco más el diseño de tu sitio puedes añadir en tus metadatos referencias a iconos personalizados, que se mostrarán en determinados contextos. El más común de ellos es el favicono (abreviatura de favorite icons, icono de «favoritos», referido al uso que se le da en las listas de «favoritos» o de  marcadores (bookmarks).</p>
+              <p>El humilde favicono, que existe desde ya hace muchos, muchos años, fue el primer icono de este tipo, un icono de 16 x 16 píxeles usado en múltiples sitios. Para añadir un favicono a tu página:</p>
+                <li>Guárdalo en el mismo directorio que la página index de tu sitio, en formato .ico (la mayoría de los buscadores admiten faviconos en los formatos más comunes como .gif o .png, pero usar el formato ICO garantiza que funcionará hasta en Internet Explorer 6.)</li>
+                <li>Añade la cabecera de tu HTML (<head>) a la línea siguiente para referenciarlo:</li>
+                  <p><img src="imagenes/favicon.png"/></p>
+              <p>Los navegadores modernos usan faviconos en diversos lugares, como en la etiqueta de la página que está abierta y en el panel de favoritos cuando la añades a tu lista de páginas favoritas:</p>
+                <img src="imagenes/bookmark-favicon.png"/>
+
+              <p>Hay en día hay un montón más de otros tipos de iconos a tener presentes. Por ejemplo, los encontrarás en el código fuente de la página de inicio de MDN:</p>
+              <img src="imagenes/apple.png"/>
+
+                <!-- iPad de tercera generación con pantalla de alta resolución: -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://developer.cdn.mozilla.net/static/img/favicon144.a6e4162070f4.png">
+<!-- iPhone con pantalla de alta resolución: -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://developer.cdn.mozilla.net/static/img/favicon114.0e9fabd44f85.png">
+<!-- iPad de primera y segunda generación: -->
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://developer.cdn.mozilla.net/static/img/favicon72.8ff9d87c82a0.png">
+<!-- Dispositivos iPhone sin pantalla Retina, iPod Touch y Android 2.1+: -->
+<link rel="apple-touch-icon-precomposed" href="https://developer.cdn.mozilla.net/static/img/favicon57.a2490b9a2d76.png">
+<!-- favicono básico -->
+<link rel="shortcut icon" href="https://developer.cdn.mozilla.net/static/img/favicon32.e02854fdcf73.png">
+
+              <p>Los comentarios explican para qué se usa cada icono (estos elementos abarcan situaciones como aportar un buen icono de alta resolución para usarlo cuando la página web se guarda en la página de inicio de un iPad).</p>
+              <p>No te preocupes demasiado sobre la implementación de todos estos tipos de iconos por el momento; se trata de una característica bastante avanzada y no se espera que tengas conocimientos de ello para avanzar en el curso. El propósito principal aquí es darte a conocer estos elementos por si te los encuentras mientras examinas el código fuente de otros sitios web.</p>
+              <img src="imagenes/nota sobre el favicono.png"/>
+
+            <p><a href="https://developer.mozilla.org/es/docs/Learn/HTML/Introduccion_a_HTML/Metados_en">Introduccion a HTML</a></p>
+            *Hay que entrar en este link y visitar esta pagina porque aca esta la informacion original de la pagina.
+              
+
+
+	  		<h3>Elementos de bloque y elementos en línea</h3>
+	  		<p>Hay dos categorías de elementos en HTML, que es importante que conozcas. Estos son los elementos de bloque y los elementos en línea.</p>
+	  		<p>Los elementos de bloque forman un bloque visible en la página; aparecerán en una línea nueva después de cualquier contenido anterior; y cualquier contenido que vaya después también aparecerá en una línea nueva. Los elementos de bloque tienden a ser elementos estructurales en la página que representan, por ejemplo, párrafos, listas, menús de navegación, pies de página, etc. Un elemento de bloque no estaría anidado dentro de un elemento en línea, pero podría estar anidado dentro de otro elemento de nivel de bloque.</p>
+
+            <p>Los elementos en línea son aquellos que están contenidos dentro de elementos de bloque y delimitan solo pequeñas partes del contenido del documento, no párrafos enteros ni agrupaciones de contenido. Un elemento en línea no hará aparecer una línea nueva en el documento; normalmente aparecen dentro de un párrafo o texto, por ejemplo es el caso de un elemento <strong>&lt;a&gt;</strong>  <em>(hipervínculo)</em> o elementos de énfasis como <Strong>&lt;em&gt; o &lt;strong&gt;</Strong>.</p>
+
+            <img src="imagenes/em.png"/> 
+	  		<img src="imagenes/em 2.png">
+	  		<p>Este elemento solo incluye los atributos globales.</p>
+
+	  		<h3>Elementos vacíos</h3>
+	  		<p>No todos los elementos siguen el patrón de arriba: etiqueta de apertura, contenido y etiqueta de cierre. Algunos elementos consisten solo en una etiqueta única, que se utiliza generalmente para insertar/incrustar algo en el documento en el lugar donde quiere incluirse. Por ejemplo, el elemento <strong>&lt;img&gt;</strong> inserta una imagen en la posición de la página donde quiere incluirse:</p>
+	  		<img src="imagenes/img src.png">
+	  		<p>Posee un atributo, pero no hay etiqueta de cierre <strong>&lt;/img&gt;</strong> ni contenido encerrado. Esto es porque un elemento de imagen no encierra contenido al cual afectar. Su propósito es desplegar una imagen en la página HTML, en el lugar en que aparece.</p>
+	  		<p><img src="images/firefox-icon.png" alt="Mi imagen de prueba"></p>
+	  		<p>La imagen de ejemplo por medio de ese atributo es un logo de Mozilla.</p>
+
+	  		<img src="https://raw.githubusercontent.com/mdn/beginner-html-site/gh-pages/images/firefox-icon.png">
+
+	  		<h2>Referencias a entidades: Inclusión de caracteres especiales en HTML</h2>
+	  		<p>En HTML, los caracteres <, >,",' y & son caracteres especiales. Forman parte de la sintaxis HTML, pero ¿cómo se pueden incluir en el texto si realmente queremos hacer uso de un ampersand (&) o el signo menor que (<), y que el navegador no lo interprete como código? </p>
+
+            <p>Tenemos que utilizar caracteres de referencia, es decir, códigos especiales que representan caracteres. Cada carácter de referencia comienza con un signo de ampersand (&) y finaliza con un punto y coma (;).</p>
+              <img src="imagenes/caracter literal.png">
+              <p>Considera el siguiente ejemplo:</p>
+              <img src="imagenes/ejemplo de inclusion de caracter especial.png">
+              <p>En la salida puedes ver que el primer párrafo ha salido mal porque el navegador cree que la segunda instancia de &lt;p&gt; comienza un párrafo nuevo. El segundo párrafo se ve bien porque hemos remplazado < y > por sus referencias correspondientes. </p>
+
+            <h2>Comentarios HTML</h2>
+            <p>En HTML, como en la mayoría de los lenguajes de programación, hay un mecanismo para escribir comentarios en el código. Los comentarios son ignorados por el navegador y son invisibles para el usuario. Su propósito es permitir comentar el código para aclarar su funcionamiento, explicar lo que hacen las diferentes partes del código, etc. Esto es muy útil como recordatorio del trabajo que has hecho  si vuelves a trabajar con un código en el que no has trabajado durante meses o si entregas tu código a otra persona para que trabaje con él.</p>
+            <p>Para convertir en un comentario una sección de contenido de tu archivo HTML, debes delimitarlo con los marcadores especiales &lt;!-- y --&gt;, por ejemplo:</p>
+             <img src="imagenes/no soy ningun comentario.png">
+             <p>Como puedes ver a continuación, el primer párrafo aparece, pero el segundo no. El segundo parrafo es el comentario invisible en la pagina, pero visible en el documento html.</p>
+
+            <h2>Marcado de texto</h2>
+            <p>Esta sección cubrirá algunos de los elementos HTML básicos que usarás para el marcado de texto.</p>
+              <h3>Encabezados</h3>
+              <p>Los elementos de encabezado permiten especificar que ciertas partes del contenido son encabezados, o subencabezados del contenido. De la misma forma que un libro tiene un título principal, y que a su vez puede tener títulos por cada capítulo individual, y subtítulos dentro de ellos, un documento HTML puede tenerlos también. HTML posee seis niveles de encabezados, &lt;h1&gt;–&lt;h6&gt;, aunque probablemente solo llegues a usar 3-4 como mucho:</p>
+              <img src="imagenes/encabezados.png">
+              <img src="imagenes/nota encabezados.png">
+
+              <h3>Párrafos</h3>
+              <p>Como se explicó más arriba, los elementos &lt;p&gt; se utilizan para encerrar párrafos de texto; los usarás frecuentemente para el marcado de contenido de texto regular:</p>
+              <img src="imagenes/simple parrafo.png">
+
+              <h3>Listas</h3>
+              <p>Mucho del contenido web está dado por listas, así que HTML tiene elementos especiales para ellas. El marcado de listas se realiza siempre en al menos dos elementos. Los dos tipos de listas más comunes son las listas ordenadas y las desordenadas:</p>
+              <ol>
+              	<li><p><strong>Las listas desordenadas</strong> son aquellas en las que el orden de los items no es relevante, como en una lista de compras. Estas son encerradas en un elemento &lt;ul&gt; (unordered list).</p></li>
+              	<li><p><strong>Las listas ordenadas</strong> son aquellas en las que el orden sí es relevante, como en una receta. Estas son encerradas en un elemento &lt;ol&gt; (ordered list).</p></li>
+              </ol>
+                <p>Cada elemento de la lista se coloca dentro de un elemento &lt;li&gt; (list item).</p>
+                <p>Por ejemplo, si quieres transformar parte del siguiente párrafo en una lista:</p>
+              <img src="imagenes/ejemplo listas.png">
+              
+
+
+
+	  		<footer>
+	  			<p>Comentarios (0)</p>
+	  		</footer>
+	  		<a href="https://www.facebook.com/clubbusologosperu">Visita al CBP</a>
+	  	</article>
+
+	  
+	  </section>
+	  <aside >
+	  	<blockquote cite="http://fazweb.com">
+	  		Mensaje 1
+	  	</blockquote>
+	  	<blockquote cite="https://learndigital.withgoogle.com/activate/courses">
+	  		Mensaje 2
+	  	</blockquote cite="https://developer.mozilla.org/es/docs/Web/CSS/ID_selectors">
+	  	
+	  </aside>
+
+	  <footer >
+	  	Derechos Reservados 2010-2018
+	  </footer>
+	  
+      </div>
+
+	</head>
+	<body>
+	</body>
+</html>
+	
